@@ -1,0 +1,7 @@
+applications:
+- name: celery-example
+  services: 
+    - my_broker
+  command: celery -A tasks worker --loglevel=info
+  health-check-type: process
+  no-route: true
